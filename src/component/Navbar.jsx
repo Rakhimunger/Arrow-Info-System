@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useState } from "react";
-// import Logo from "../assets/images/logo.png";
+import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-slate-100 text-slate-900 shadow-lg">
+    <nav className="bg-slate-100 text-slate-900 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4 py-3 md:py-2">
-        <div className="logo w-2/6 sm:w-2/6 md:w-2/6 lg:w-1/5">
+        {/* Logo */}
+        <div className="w-1/2 md:w-1/4">
           <NavLink to="/">
-            {/* <img src={Logo} alt="logo" className="w-full h-auto" /> */}
-            <h1 className="text-red-800">Arrow Info System</h1>
+            <img src={Logo} alt="logo" className="h-12 w-auto object-contain" />
           </NavLink>
         </div>
 
+        {/* Hamburger Icon */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-600 focus:outline-none"
+            className="text-gray-700 focus:outline-none"
           >
             {isMenuOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="2.5"
+                strokeWidth={2.5}
                 stroke="currentColor"
                 className="w-6 h-6"
               >
@@ -41,7 +41,7 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="2.5"
+                strokeWidth={2.5}
                 stroke="currentColor"
                 className="w-6 h-6"
               >
@@ -55,64 +55,68 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Navigation Links */}
         <div
-          className={`md:flex gap-2 lg:gap-4 items-center text-sm md:text-md lg:max-w-3/6 ${
-            isMenuOpen
-              ? "md:hidden flex flex-col absolute right-0 top-[55px] z-20 px-4 py-1 bg-slate-100"
-              : "hidden"
-          } md:block`}
+          className={`flex-col md:flex-row md:flex gap-4 items-center text-sm md:text-base absolute md:static right-0 top-16 bg-slate-100 md:bg-transparent shadow-md md:shadow-none transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "flex px-4 py-3" : "hidden md:flex"
+          }`}
         >
           <NavLink
             to="/"
-            className="md:hidden lg:block min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
             Home
           </NavLink>
           <NavLink
             to="/About"
-            className=" min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 ${
-                text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
-            About Us
+            Bus Ticket
           </NavLink>
           <NavLink
             to="/Activities"
-            className=" min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 ${
-                text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
-            Activities
+            Bus Hire
           </NavLink>
           <NavLink
             to="/Events"
-            className=" min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 ${
-                text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
-            Events
+            Car Hire
           </NavLink>
           <NavLink
             to="/Chapters"
-            className=" min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 ${
-                text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
-            Chapters
+            Traveller Hire
           </NavLink>
           <NavLink
             to="/gallery"
-            className=" min-w-max text-center hover:text-white hover:bg-blue-600 hover:rounded-2xl px-6 py-1 ${
-                text-gray-800 font-medium"
+            className="hover:text-white hover:bg-blue-600 hover:rounded-2xl px-4 py-1 text-gray-800 font-medium"
           >
             Gallery
           </NavLink>
+          {/* Join Button for Mobile View */}
+          <div className="md:hidden">
+            <Link
+              to="/Join"
+              className="bg-blue-800 hover:bg-blue-700 text-white font-semibold px-6 py-2 mt-2 rounded-2xl shadow"
+            >
+              Join
+            </Link>
+          </div>
         </div>
 
-        {/* <div className="hidden md:block">
+        {/* Join Button for Desktop */}
+        <div className="hidden md:block">
           <Link
             to="/Join"
             className="bg-blue-800 hover:bg-blue-700 text-white font-semibold px-8 py-2 rounded-2xl shadow-md shadow-blue-950"
           >
             Join
           </Link>
-        </div> */}
+        </div>
       </div>
     </nav>
   );

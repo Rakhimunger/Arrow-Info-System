@@ -1,13 +1,16 @@
 import React from "react";
 import Navbar from "./component/Navbar";
-import { Route, Routes } from "react-router-dom";
+import Header from "./component/Header";
+import Transpost from "./component/Transpost";
+import Objective from "./component/Objective";
 
 const App = () => {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Navbar />} />
-      </Routes>
+      <Navbar />
+      <Header />
+      <Transpost />
+      <Objective />
     </div>
   );
 };
