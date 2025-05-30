@@ -16,7 +16,7 @@ const ObjectivesSection = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Comfort & Safety */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <FaShieldAlt />
           </div>
@@ -36,7 +36,7 @@ const ObjectivesSection = () => {
         </div>
 
         {/* Experienced Staff */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <FaUserFriends />
           </div>
@@ -56,7 +56,7 @@ const ObjectivesSection = () => {
         </div>
 
         {/* Flexible Travel Options */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <MdEventAvailable />
           </div>
@@ -76,7 +76,7 @@ const ObjectivesSection = () => {
         </div>
 
         {/* Wide Coverage */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <FaMapMarkedAlt />
           </div>
@@ -96,7 +96,7 @@ const ObjectivesSection = () => {
         </div>
 
         {/* Customer Support */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <MdSupportAgent />
           </div>
@@ -116,7 +116,7 @@ const ObjectivesSection = () => {
         </div>
 
         {/* Affordable Pricing */}
-        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700">
+        <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg text-center border-2 border-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105">
           <div className="text-4xl text-blue-500 mb-4">
             <FaBusAlt />
           </div>

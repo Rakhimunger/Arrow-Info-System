@@ -1,17 +1,17 @@
 import React from "react";
 
 // 📦 Import images
-import Car5 from "../assets/Car5.jpg";
+import Testimonals5 from "../assets/Testimonals5.jpg";
 import Bus1 from "../assets/Bus1.jpg";
-import Car1 from "../assets/Car1.jpg";
+import Testimonals3 from "../assets/Testimonals3.jpg";
 import Car2 from "../assets/Car2.jpg";
 import Car4 from "../assets/Car4.jpg";
 import Bus5 from "../assets/Bus5.jpg";
 
 const imageData = [
-  { src: Car5, alt: "Travels", title: "Travel Ride" },
+  { src: Testimonals5, alt: "Travels", title: "Travel Ride" },
   { src: Bus1, alt: "Bus1", title: "Luxury Bus" },
-  { src: Car1, alt: "Car1", title: "Sedan Car" },
+  { src: Testimonals3, alt: "Car1", title: "Sedan Car" },
   { src: Car2, alt: "Car2", title: "Classic Car" },
   { src: Car4, alt: "Car4", title: "Vintage Ride" },
   { src: Bus5, alt: "Bus5", title: "Sleeper Coach" },

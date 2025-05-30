@@ -3,6 +3,7 @@ import Navbar from "./component/Navbar";
 import Header from "./component/Header";
 import Transpost from "./component/Transpost";
 import Objective from "./component/Objective";
+import Testimonals from "./component/Testimonals";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Transpost />
       <Objective />
+      <Testimonals />
     </div>
   );
 };
